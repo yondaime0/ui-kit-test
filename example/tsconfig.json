@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "society-ui-kit": ["../src/index"],
+      "society-ui-kit/*": ["../src/*"]
+    }
+  }
+}
