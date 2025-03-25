@@ -5,8 +5,4 @@ export const LOCALES = {
   en: require("./locales/en/ns.json")
 };
 
-export const IMAGES = {
-  splashBackground: require("./images/splash-background.png")
-};
-
 export { ICONS };

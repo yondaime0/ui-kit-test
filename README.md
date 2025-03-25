@@ -2,48 +2,6 @@
 
 ui-kit is a library that contains all ui components used in Smart City app
 
-# Metro config setup
-
-In order to use ui-kit properly, you need to restrict metro from using react, react native, gorhom22/portal, and react-native/navigation
-
-
-```js
-const { getDefaultConfig } = require('expo/metro-config');
-const path = require('path');
-
-const config = getDefaultConfig(__dirname);
-
-config.resolver.blockList = [
-  ...Array.from(config.resolver.blockList ?? []),
-  new RegExp(path.resolve('../ui-kit/node_modules', 'react')),
-  new RegExp(path.resolve('../ui-kit/node_modules', 'react-native')),
-  new RegExp(path.resolve('../ui-kit/node_modules', '@react-navigation')),
-  new RegExp(path.resolve('../ui-kit/node_modules', 'react-navigation')),
-  new RegExp(path.resolve('../ui-kit/node_modules', '@gorhom')),
-
-];
-
-config.resolver.nodeModulesPaths = [
-  path.resolve(__dirname, './node_modules'),
-  path.resolve(__dirname, '../ui-kit/node_modules'),
-];
-
-config.resolver.extraNodeModules = {
-  'ui-kit': '../ui-kit',
-};
-
-config.watchFolders = [path.resolve(__dirname, '../ui-kit')];
-
-config.transformer.getTransformOptions = async () => ({
-  transform: {
-    experimentalImportSupport: false,
-    inlineRequires: true,
-  },
-});
-
-module.exports = config;
-```
-
 # Create theme functionality 
 
 ui-kit allows creating/overriding themes directly from your app

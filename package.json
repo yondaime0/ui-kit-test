@@ -9,11 +9,12 @@
     "clean": "expo-module clean",
     "lint": "expo-module lint",
     "test": "expo-module test",
-    "prepare": "expo-module prepare",
+    "prepare": "expo-module prepare && yarn copy-assets",
     "prepublishOnly": "expo-module prepublishOnly",
     "expo-module": "expo-module",
     "open:ios": "xed example/ios",
-    "open:android": "open -a \"Android Studio\" example/android"
+    "open:android": "open -a \"Android Studio\" example/android",
+    "copy-assets": "cpx \"src/assets/**/*.{json,png,svg}\" build/assets"
   },
   "keywords": [
     "react-native",
@@ -27,6 +28,7 @@
     "@kichiyaki/react-native-barcode-generator": "^0.6.7",
     "@react-navigation/elements": "^2.3.1",
     "@react-navigation/native": "^7.0.19",
+    "cpx": "^1.5.0",
     "dayjs": "^1.11.13",
     "expo-av": "^15.0.2",
     "expo-blur": "^14.0.3",
