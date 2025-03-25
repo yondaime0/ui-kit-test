@@ -2,14 +2,25 @@ import { TouchableOpacity } from "react-native";
 import { useStyles } from "react-native-unistyles";
 
 import { stylesheet } from "./UICheckBox.styles";
+import { UICheckBoxProps } from "./UICheckBox.types";
 import { ICONS } from "../../assets";
 import { UIIcon } from "../UIIcon";
 
-import type { UICheckBoxProps } from "./UICheckBox.types";
-
-const UICheckBox: React.FC<UICheckBoxProps> = ({ isChecked, onToggle }) => {
+const UICheckBox: React.FC<UICheckBoxProps> = ({
+  isChecked,
+  onToggle,
+  variant = "main",
+  isError
+}) => {
   const { styles, theme } = useStyles(stylesheet, {
-    type: isChecked ? "checked" : "unChecked"
+    type:
+      isChecked && variant === "main"
+        ? "checked-main"
+        : isChecked && variant === "white"
+          ? "checked-white"
+          : isError
+            ? "error"
+            : "unChecked"
   });
 
   return (
@@ -21,7 +32,7 @@ const UICheckBox: React.FC<UICheckBoxProps> = ({ isChecked, onToggle }) => {
       {isChecked ? (
         <UIIcon
           xml={ICONS.smallCheck}
-          stroke={theme.colors.white}
+          stroke={variant === "main" ? theme.colors.white : theme.colors.main}
           width={14}
           height={14}
         />

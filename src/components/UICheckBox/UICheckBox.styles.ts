@@ -10,9 +10,17 @@ export const stylesheet = createStyleSheet((theme) => ({
     borderWidth: 2,
     variants: {
       type: {
-        checked: {
+        "checked-main": {
           backgroundColor: theme.colors.main,
           borderColor: theme.colors.main
+        },
+        "checked-white": {
+          backgroundColor: theme.colors.white,
+          borderColor: theme.colors.white
+        },
+        error: {
+          backgroundColor: theme.colors.white,
+          borderColor: theme.colors.error
         },
         unChecked: {
           backgroundColor: theme.colors.white,
