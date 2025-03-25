@@ -27,7 +27,6 @@
     "@candlefinance/faster-image": "^1.7.2",
     "@kichiyaki/react-native-barcode-generator": "^0.6.7",
     "@react-navigation/elements": "^2.3.1",
-    "@react-navigation/native": "^7.0.19",
     "cpx": "^1.5.0",
     "dayjs": "^1.11.13",
     "expo-av": "^15.0.2",

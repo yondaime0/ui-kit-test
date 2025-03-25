@@ -1,5 +1,4 @@
 import { HeaderTitleProps } from "@react-navigation/elements/src/types";
-import { StackActions, useNavigation } from "@react-navigation/native";
 import React from "react";
 import { StyleProp, ViewStyle } from "react-native";
 import { useStyles } from "react-native-unistyles";
@@ -29,20 +28,19 @@ const UIStackHeaderTitle: React.FC<HeaderTitleProps> = ({ children }) => (
 
 const UIBackButton: React.FC<UIIconButtonProps> = (props) => {
   const { theme } = useStyles();
-  const navigation = useNavigation();
+  // const navigation = useNavigation();
 
-  const handlePress = () => {
-    if (navigation.canGoBack()) {
-      navigation.goBack();
-    } else {
-      navigation.dispatch(StackActions.replace("BottomTabNavigation"));
-    }
-  };
+  // const handlePress = () => {
+  //   if (navigation.canGoBack()) {
+  //     navigation.goBack();
+  //   } else {
+  //     navigation.dispatch(StackActions.replace("BottomTabNavigation"));
+  //   }
+  // };
 
   return (
     <UIIconButton
       {...props}
-      onPress={handlePress}
       hitSlop={{ top: 15, bottom: 15, left: 15, right: 15 }}
       xml={ICONS.arrowLeft}
       width={24}
