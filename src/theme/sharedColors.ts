@@ -1,0 +1,28 @@
+export const sharedColors = {
+  white: "#FFFFFF",
+  black: "#000000",
+  input: "#F7F9FB",
+  grayLight: "#F3F5F7",
+  gray: "#B6B7C1",
+  grayMedium: "#EEF1FC",
+  dark: "#1E1E1E",
+  darkLight: "#424A5D",
+
+  error: "#EA4335",
+  green: "#18C674",
+  lightGreen: "#B5EECB",
+  softGreen: "#C5DD94",
+  limeGreen: "#8EB563",
+  orange: "#E48049",
+  lightOrange: "#FEC8A7",
+  pink: "#E0CAC5",
+  cardsDark: "#282A32",
+  cardsDarkSecondary: "#303747",
+  cardsDarkLight: "#3C3D4A",
+  label: "#757588",
+  tabBar: "#161618",
+  purple: "#D5B2FF",
+  mint: "#C2ECD8",
+  lightYellow: "#FCECA5",
+  lightViolet: "#CBC7FC"
+};
